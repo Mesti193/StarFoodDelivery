@@ -1,6 +1,8 @@
 package com.example.starFoodDelivery.ui.fragment
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import androidx.fragment.app.Fragment
 import com.example.starFoodDelivery.contracts.BaseView
 import com.example.starFoodDelivery.ui.activity.MainActivity
@@ -22,5 +24,10 @@ open class BaseMainFragment: Fragment(), BaseView {
     override fun addContent(fragment: Fragment, tag: String) = mainActivity.addContent(fragment, tag)
 
     override fun switchContent(fragment: Fragment, tag: String) = mainActivity.switchContent(fragment, tag)
+
+    override fun startActivity(activity: Activity) {
+        mainActivity.startActivity(Intent(mainActivity, activity::class.java))
+        mainActivity.finish()
+    }
 
 }

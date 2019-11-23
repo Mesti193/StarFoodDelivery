@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.starFoodDelivery.ui.activity.MainActivity"/>
+        <activity android:name="com.example.starFoodDelivery.ui.activity.HomePageActivity"/>
     </application>
 
 </manifest>
