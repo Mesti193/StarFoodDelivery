@@ -3,7 +3,14 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-    
+
+    <color name="black_transparent_80">#CC000000</color>
+
     <color name="splash_screen.bg">#f76c44</color>
     <color name="white">#FFF</color>
+    
+    <color name="grey">#9499a2</color>
+    <color name="dark_grey">#1c1a2e</color>
+    <color name="facebook_button">#5671ea</color>
+    <color name="google_button">#dc373b</color>
 </resources>

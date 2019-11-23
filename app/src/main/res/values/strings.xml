@@ -1,4 +1,19 @@
 <resources>
     <string name="app_name">Star Delivery</string>
     <string name="splash_screen.description">INDIA\'S FASTEST GROWING\nFOOD DELIVERY PLATFORM</string>
+
+    <string name="login.welcome">Welcome to</string>
+    <string name="login.login_to_account">Login to your account</string>
+    <string name="login.email">Email</string>
+    <string name="login.email_hint">Enter Email ID</string>
+    <string name="login.password">Password</string>
+    <string name="login.password_hint">Enter Password</string>
+    <string name="login.forgot_password">Forgot Password?</string>
+    <string name="login.login_button">login</string>
+    <string name="login.social_accounts">Continue with social accounts</string>
+    <string name="login.facebook">Continue with Facebook</string>
+    <string name="login.google">Continue with Google</string>
+    <string name="login.no_account">Dont have an account?</string>
+    <string name="login.create_account"><u>Create now</u></string>
+
 </resources>

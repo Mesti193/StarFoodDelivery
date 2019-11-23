@@ -1,4 +1,4 @@
-package com.example.starFoodDelivery.ui
+package com.example.starFoodDelivery.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -16,7 +16,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         Handler().postDelayed({
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         }, SPLASH_TIME_OUT)
     }
