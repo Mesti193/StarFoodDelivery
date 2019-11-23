@@ -47,11 +47,11 @@ class SignUpFragment: BaseMainFragment(), SignUpContract.View, View.OnClickListe
     private fun validate(){
         val mobileNumber: Boolean = etMobileNumber.text?.isNotEmpty()!!
         val fullName: Boolean = etFullName.text?.isNotEmpty()!!
-        val mail: Boolean = etEmail.text?.isNotEmpty()!!
+        val email: Boolean = etEmail.text?.isNotEmpty()!!
         val password: Boolean = etPassword.text?.isNotEmpty()!!
 
         btCreateAccount?.apply {
-            if(mobileNumber && fullName && mail && password){
+            if(mobileNumber && fullName && email && password){
                 setBackgroundColor(ContextCompat.getColor(context!!, R.color.splash_screen_bg))
                 isEnabled = true
                 isClickable = true

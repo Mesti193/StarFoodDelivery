@@ -2,6 +2,7 @@ package com.example.starFoodDelivery.presenters.signup
 
 import android.content.Context
 import com.example.starFoodDelivery.contracts.signup.SignUpContract
+import com.example.starFoodDelivery.ui.fragment.OtpVerificationFragment
 
 
 class SignUpPresenter: SignUpContract.Presenter {
@@ -14,7 +15,8 @@ class SignUpPresenter: SignUpContract.Presenter {
         view.initView()
     }
 
-    override fun onCreateAccountButtonClick() = view.showToast("onCreateAccountButtonClick")
+//    override fun onCreateAccountButtonClick() = view.showToast("onCreateAccountButtonClick")
+    override fun onCreateAccountButtonClick() = view.addContent(OtpVerificationFragment().newInstance(), OtpVerificationFragment.TAG)
 
     override fun onTermsClick() = view.showToast("onTermsClick")
 

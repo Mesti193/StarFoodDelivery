@@ -46,4 +46,6 @@ dependencies {
     // RxJava2
     implementation "io.reactivex.rxjava2:rxkotlin:$rxkotlin_version"
     implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
+
+    implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.1.0'
 }

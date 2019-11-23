@@ -2,6 +2,7 @@ package com.example.starFoodDelivery.presenters.login
 
 import android.content.Context
 import com.example.starFoodDelivery.contracts.login.LoginContract
+import com.example.starFoodDelivery.ui.fragment.OtpVerificationFragment
 import com.example.starFoodDelivery.ui.fragment.SignUpFragment
 
 class LoginPresenter: LoginContract.Presenter {
@@ -16,7 +17,7 @@ class LoginPresenter: LoginContract.Presenter {
 
     override fun onForgotPasswordClick() = view.showToast("onForgotPasswordClick")
 
-    override fun onLoginButtonClick(email: String, password: String) = view.showToast("onLoginButtonClick")
+    override fun onLoginButtonClick(email: String, password: String) = view.addContent(OtpVerificationFragment().newInstance(), OtpVerificationFragment.TAG)
 
     override fun onFacebookButtonClick() = view.showToast("onFacebookButtonClick")
 

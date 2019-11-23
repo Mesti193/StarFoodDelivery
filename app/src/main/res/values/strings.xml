@@ -23,4 +23,8 @@
     <string name="signup.create_account_button">Create account</string>
     <string name="signup.accept_terms">By creating account, you accept terms and conditions</string>
 
+    <string name="otp.verify_button">Verify</string>
+    <string name="otp.verify_number">Verify number</string>
+    <string name="otp.otp_send_to">OTP send to:</string>
+
 </resources>

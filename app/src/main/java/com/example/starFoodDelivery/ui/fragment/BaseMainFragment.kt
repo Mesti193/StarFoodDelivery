@@ -10,7 +10,7 @@ open class BaseMainFragment: Fragment(), BaseView {
 
     open lateinit var mainActivity: MainActivity
 
-    override fun onAttach(context: Context?) {
+    override fun onAttach(context: Context) {
         super.onAttach(context)
         mainActivity = (activity as MainActivity)
     }

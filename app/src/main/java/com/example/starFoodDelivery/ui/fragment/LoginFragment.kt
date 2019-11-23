@@ -4,10 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import com.example.starFoodDelivery.R
 import com.example.starFoodDelivery.contracts.login.LoginContract
 import com.example.starFoodDelivery.presenters.login.LoginPresenter
 import com.example.starFoodDelivery.util.TAG
+import com.example.starFoodDelivery.util.afterTextChanged
 import com.example.starFoodDelivery.util.text
 import kotlinx.android.synthetic.main.fragment_login.*
 
@@ -38,6 +40,25 @@ class LoginFragment: BaseMainFragment(), LoginContract.View, View.OnClickListene
         btGoogle?.setOnClickListener(this)
         tvNoAccount?.setOnClickListener(this)
         tvCreateNow?.setOnClickListener(this)
+
+        etEmail.afterTextChanged { validate() }
+        etPassword.afterTextChanged { validate() }
+    }
+
+    private fun validate(){
+        val email: Boolean = etEmail.text?.isNotEmpty()!!
+        val password: Boolean = etPassword.text?.isNotEmpty()!!
+        btLogin?.apply {
+            if(email && password){
+                setBackgroundColor(ContextCompat.getColor(context!!, R.color.splash_screen_bg))
+                isEnabled = true
+                isClickable = true
+            }else{
+                setBackgroundColor(ContextCompat.getColor(context!!, R.color.light_grey))
+                isEnabled = false
+                isClickable = false
+            }
+        }
     }
 
     override fun onClick(v: View?) {
