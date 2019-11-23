@@ -19,6 +19,8 @@ open class BaseMainFragment: Fragment(), BaseView {
 
     override fun isProgressBarVisible(isVisible: Boolean) = mainActivity.changeProgressBarVisibility(isVisible)
 
+    override fun addContent(fragment: Fragment, tag: String) = mainActivity.addContent(fragment, tag)
+
     override fun switchContent(fragment: Fragment, tag: String) = mainActivity.switchContent(fragment, tag)
 
 }

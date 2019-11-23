@@ -2,6 +2,7 @@ package com.example.starFoodDelivery.presenters.login
 
 import android.content.Context
 import com.example.starFoodDelivery.contracts.login.LoginContract
+import com.example.starFoodDelivery.ui.fragment.SignUpFragment
 
 class LoginPresenter: LoginContract.Presenter {
     private lateinit var view: LoginContract.View
@@ -21,6 +22,6 @@ class LoginPresenter: LoginContract.Presenter {
 
     override fun onGoogleButtonClick() = view.showToast("onGoogleButtonClick")
 
-    override fun onCreateAccountClick() = view.showToast("onCreateAccountClick")
+    override fun onCreateAccountClick() = view.addContent(SignUpFragment().newInstance(), SignUpFragment.TAG)
 
 }

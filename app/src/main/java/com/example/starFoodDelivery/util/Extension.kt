@@ -1,6 +1,8 @@
 package com.example.starFoodDelivery.util
 
 import android.app.Activity
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -44,3 +46,17 @@ fun TextView.text(text: String){ this.text = text }
 fun EditText.text() = this.text.toString()
 
 fun Fragment.getSimpleName(): String = this::class.java.simpleName
+
+fun EditText.afterTextChanged(afterTextChanged: (String) -> Unit) {
+    this.addTextChangedListener(object : TextWatcher {
+        override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+        }
+
+        override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+        }
+
+        override fun afterTextChanged(editable: Editable?) {
+            afterTextChanged.invoke(editable.toString())
+        }
+    })
+}

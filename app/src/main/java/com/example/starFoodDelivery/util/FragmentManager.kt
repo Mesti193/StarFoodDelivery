@@ -1,5 +1,7 @@
 package com.example.starFoodDelivery.util
 
+import com.example.starFoodDelivery.R
+
 //internal fun androidx.fragment.app.FragmentManager.removeFragment(tag: String,
 //                                                                  slideIn: Int = R.anim.slide_left,
 //                                                                  slideOut: Int = R.anim.slide_right) {
@@ -51,4 +53,15 @@ internal fun androidx.fragment.app.FragmentManager.switchFragment(containerViewI
         .commit()
 }
 
+internal fun androidx.fragment.app.FragmentManager.addFragment(containerViewId: Int,
+                                                               fragment: androidx.fragment.app.Fragment,
+                                                               tag: String,
+                                                               slideIn: Int = R.anim.slide_left,
+                                                               slideOut: Int = R.anim.slide_right) {
+    this.beginTransaction()
+        .addToBackStack(tag)
+        .setCustomAnimations(slideIn, slideOut)
+        .replace(containerViewId, fragment, tag)
+        .commit()
+}
 
