@@ -10,6 +10,7 @@ interface HomePageContract {
         fun changeProgressBarVisibility(isVisible: Boolean)
         fun addContent(fragment: androidx.fragment.app.Fragment, tag: String)
         fun switchContent(fragment: androidx.fragment.app.Fragment, tag: String)
+        fun changeBottomBarButtons(id: Int)
     }
 
     interface Presenter: BasePresenter<View> {

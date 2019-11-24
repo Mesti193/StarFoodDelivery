@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         switchContent(LoginFragment().newInstance(), LoginFragment.TAG)
-//        switchContent(OtpVerificationFragment().newInstance(), OtpVerificationFragment.TAG)
     }
 
     fun addContent(fragment: androidx.fragment.app.Fragment, tag: String) = supportFragmentManager.addFragment(R.id.clContainer, fragment, tag)

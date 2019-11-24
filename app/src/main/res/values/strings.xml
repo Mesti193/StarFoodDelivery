@@ -27,4 +27,6 @@
     <string name="otp.verify_number">Verify number</string>
     <string name="otp.otp_send_to">OTP send to:</string>
 
+    <string name="options.edit">Edit</string>
+
 </resources>

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.06"
+            android:orientation="vertical"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.94"
+            android:orientation="vertical"/>
+
+        <TextView
+            android:id="@+id/tvFullName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Full Name"
+            android:textStyle="bold"
+            android:textColor="@color/dark_grey"
+            android:textSize="22sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/glStart"
+            app:layout_constraintEnd_toStartOf="@+id/tvEdit"/>
+
+        <TextView
+            android:id="@+id/tvEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/options.edit"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textAllCaps="true"
+            app:layout_constraintTop_toTopOf="@+id/tvFullName"
+            app:layout_constraintStart_toEndOf="@+id/tvFullName"
+            app:layout_constraintEnd_toEndOf="@+id/glEnd"
+            app:layout_constraintBottom_toBottomOf="@+id/tvFullName"/>
+
+        <TextView
+            android:id="@+id/tvPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="666-666-666"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintTop_toBottomOf="@+id/tvFullName"
+            app:layout_constraintStart_toStartOf="@+id/glStart"
+            app:layout_constraintEnd_toStartOf="@+id/vSeparator"/>
+
+        <View
+            android:id="@+id/vSeparator"
+            android:layout_width="1.5dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/dark_grey"
+            app:layout_constraintTop_toTopOf="@+id/tvPhoneNumber"
+            app:layout_constraintStart_toEndOf="@+id/tvPhoneNumber"
+            app:layout_constraintEnd_toStartOf="@+id/tvEmail"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPhoneNumber"/>
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="test@test.com"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvFullName"
+            app:layout_constraintStart_toEndOf="@+id/vSeparator"/>
+
+        <View
+            android:id="@+id/vSeparator2"
+            android:layout_width="0dp"
+            android:layout_height="1.5dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/dark_grey"
+            app:layout_constraintTop_toBottomOf="@+id/tvEmail"
+            app:layout_constraintStart_toStartOf="@+id/glStart"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"/>
+
+        <TextView
+            android:id="@+id/tvMyAccount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="MY ACCOUNTS"
+            android:textStyle="bold"
+            android:textColor="@color/dark_grey"
+            android:textSize="22sp"
+            android:textAllCaps="true"
+            app:layout_constraintTop_toTopOf="@+id/vSeparator2"
+            app:layout_constraintStart_toStartOf="@+id/glStart"
+            app:layout_constraintEnd_toStartOf="@+id/ivAccountList"/>
+
+        <TextView
+            android:id="@+id/tvMyAccountDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Addresses, Payments, Favourites, Redderals &amp; Offers"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvMyAccount"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintEnd_toStartOf="@+id/ivAccountList"/>
+
+        <ImageView
+            android:id="@+id/ivAccountList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_arrow_right"
+            app:layout_constraintTop_toTopOf="@+id/tvMyAccount"
+            app:layout_constraintEnd_toEndOf="@+id/glEnd"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMyAccountDesc"/>
+
+        <View
+            android:id="@+id/vSeparatorAccount"
+            android:layout_width="0dp"
+            android:layout_height="1.5dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/dark_grey"
+            app:layout_constraintTop_toBottomOf="@+id/tvMyAccountDesc"
+            app:layout_constraintStart_toStartOf="@+id/glStart"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"/>
+
+        <TextView
+            android:id="@+id/tvManageAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:text="Manage Address"
+            android:textStyle="bold"
+            android:textColor="@color/dark_grey"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/vSeparatorAccount"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintEnd_toStartOf="@id/ivManageAddress"/>
+
+        <ImageView
+            android:id="@+id/ivManageAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_arrow_right"
+            app:layout_constraintTop_toTopOf="@+id/tvManageAddress"
+            app:layout_constraintEnd_toEndOf="@+id/glEnd"
+            app:layout_constraintBottom_toBottomOf="@+id/tvManageAddress"/>
+
+        <TextView
+            android:id="@+id/tvPayment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Payment"
+            android:textStyle="bold"
+            android:textColor="@color/dark_grey"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvManageAddress"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintEnd_toStartOf="@id/ivPayment"/>
+
+        <ImageView
+            android:id="@+id/ivPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_arrow_right"
+            app:layout_constraintTop_toTopOf="@+id/tvPayment"
+            app:layout_constraintEnd_toEndOf="@+id/glEnd"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPayment"/>
+
+        <TextView
+            android:id="@+id/tvFavourites"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Favourites"
+            android:textStyle="bold"
+            android:textColor="@color/dark_grey"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvPayment"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintEnd_toStartOf="@id/ivFavourites"/>
+
+        <ImageView
+            android:id="@+id/ivFavourites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_arrow_right"
+            app:layout_constraintTop_toTopOf="@+id/tvFavourites"
+            app:layout_constraintEnd_toEndOf="@+id/glEnd"
+            app:layout_constraintBottom_toBottomOf="@+id/tvFavourites"/>
+
+        <TextView
+            android:id="@+id/tvRefferals"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Refferals"
+            android:textStyle="bold"
+            android:textColor="@color/dark_grey"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvFavourites"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintEnd_toStartOf="@id/ivRefferals"/>
+
+        <ImageView
+            android:id="@+id/ivRefferals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_arrow_right"
+            app:layout_constraintTop_toTopOf="@+id/tvRefferals"
+            app:layout_constraintEnd_toEndOf="@+id/glEnd"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRefferals"/>
+
+        <TextView
+            android:id="@+id/tvOffers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Offers"
+            android:textStyle="bold"
+            android:textColor="@color/dark_grey"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvRefferals"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintEnd_toStartOf="@id/ivOffers"/>
+
+        <ImageView
+            android:id="@+id/ivOffers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_arrow_right"
+            app:layout_constraintTop_toTopOf="@+id/tvOffers"
+            app:layout_constraintEnd_toEndOf="@+id/glEnd"
+            app:layout_constraintBottom_toBottomOf="@+id/tvOffers"/>
+
+        <View
+            android:id="@+id/vSeparatorHelp"
+            android:layout_width="0dp"
+            android:layout_height="1.5dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/dark_grey"
+            app:layout_constraintTop_toBottomOf="@+id/tvOffers"
+            app:layout_constraintStart_toStartOf="@+id/glStart"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"/>
+
+        <TextView
+            android:id="@+id/tvHelp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="HELP"
+            android:textStyle="bold"
+            android:textColor="@color/dark_grey"
+            android:textSize="22sp"
+            android:textAllCaps="true"
+            app:layout_constraintTop_toTopOf="@+id/vSeparatorHelp"
+            app:layout_constraintStart_toStartOf="@+id/glStart"
+            app:layout_constraintEnd_toStartOf="@+id/ivHelp"/>
+
+        <TextView
+            android:id="@+id/tvHelpDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Help center related your orders and queries"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvHelp"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintEnd_toStartOf="@+id/ivHelp"/>
+
+        <ImageView
+            android:id="@+id/ivHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_arrow_right"
+            app:layout_constraintTop_toTopOf="@+id/tvHelp"
+            app:layout_constraintEnd_toEndOf="@+id/glEnd"
+            app:layout_constraintBottom_toBottomOf="@+id/tvHelpDesc"/>
+
+        <View
+            android:id="@+id/vSeparatorRecentOrders"
+            android:layout_width="0dp"
+            android:layout_height="1.5dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/dark_grey"
+            app:layout_constraintTop_toBottomOf="@+id/tvHelpDesc"
+            app:layout_constraintStart_toStartOf="@+id/glStart"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"/>
+
+        <TextView
+            android:id="@+id/tvRecentOrders"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="RECENT ORDERS"
+            android:textStyle="bold"
+            android:textColor="@color/dark_grey"
+            android:textSize="22sp"
+            android:textAllCaps="true"
+            app:layout_constraintTop_toTopOf="@+id/vSeparatorRecentOrders"
+            app:layout_constraintStart_toStartOf="@+id/glStart"
+            app:layout_constraintEnd_toStartOf="@+id/ivRecentOrder"/>
+
+        <TextView
+            android:id="@+id/tvRecentOrdersDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="View all recent orders"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvRecentOrders"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintEnd_toStartOf="@+id/ivRecentOrder"/>
+
+        <ImageView
+            android:id="@+id/ivRecentOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_arrow_right"
+            app:layout_constraintTop_toTopOf="@+id/tvRecentOrders"
+            app:layout_constraintEnd_toEndOf="@+id/glEnd"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRecentOrdersDesc"/>
+
+        <View
+            android:id="@+id/vLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/options.view_bg"
+            app:layout_constraintTop_toBottomOf="@+id/tvRecentOrdersDesc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvLogout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="LOGOUT"
+            android:textStyle="bold"
+            android:textColor="@color/dark_grey"
+            android:textSize="22sp"
+            android:textAllCaps="true"
+            app:layout_constraintTop_toBottomOf="@+id/vLogout"
+            app:layout_constraintStart_toStartOf="@+id/glStart"
+            app:layout_constraintEnd_toStartOf="@+id/glEnd"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -19,4 +19,6 @@
 
     <color name="otp_button">#63b04a</color>
 
+    <color name="options.view_bg">#e4e5e8</color>
+
 </resources>

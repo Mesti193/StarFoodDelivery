@@ -2,6 +2,8 @@ package com.example.starFoodDelivery.presenters.home_page
 
 import android.content.Context
 import com.example.starFoodDelivery.contracts.home_page.HomePageContract
+import com.example.starFoodDelivery.ui.activity.HomePageActivity
+import com.example.starFoodDelivery.ui.fragment.OptionsFragment
 
 class HomePagePresenter: HomePageContract.Presenter {
     private lateinit var view: HomePageContract.View
@@ -13,13 +15,28 @@ class HomePagePresenter: HomePageContract.Presenter {
         view.initView()
     }
 
-    override fun onHomeButtonClick() = view.showToast("onHomeButtonClick")
+    override fun onHomeButtonClick() {
+        view.changeBottomBarButtons(HomePageActivity.HOME_BUTTON)
+        view.showToast("onHomeButtonClick")
+    }
 
-    override fun onOffersButtonClick() = view.showToast("onOffersButtonClick")
+    override fun onOffersButtonClick() {
+        view.changeBottomBarButtons(HomePageActivity.OFFERS_BUTTON)
+        view.showToast("onOffersButtonClick")
+    }
 
-    override fun onSearchButtonClick() = view.showToast("onSearchButtonClick")
+    override fun onSearchButtonClick() {
+        view.changeBottomBarButtons(HomePageActivity.SEARCH_BUTTON)
+        view.showToast("onSearchButtonClick")
+    }
 
-    override fun onCartButtonClick() = view.showToast("onCartButtonClick")
+    override fun onCartButtonClick() {
+        view.changeBottomBarButtons(HomePageActivity.CART_BUTTON)
+        view.showToast("onCartButtonClick")
+    }
 
-    override fun onMoreButtonClick() = view.showToast("onMoreButtonClick")
+    override fun onMoreButtonClick() {
+        view.changeBottomBarButtons(HomePageActivity.MORE_BUTTON)
+        view.switchContent(OptionsFragment().newInstance(), OptionsFragment.TAG)
+    }
 }

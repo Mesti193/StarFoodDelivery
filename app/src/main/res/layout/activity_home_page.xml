@@ -46,9 +46,8 @@
 
                 <ImageView
                     android:id="@+id/ivHome"
-                    android:layout_width="28dp"
+                    android:layout_width="0dp"
                     android:layout_height="28dp"
-                    android:layout_marginStart="16dp"
                     app:srcCompat="@drawable/ic_home"
                     app:layout_constraintHorizontal_chainStyle="spread_inside"
                     app:layout_constraintTop_toTopOf="parent"
@@ -58,10 +57,11 @@
 
                 <TextView
                     android:id="@+id/tvHome"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="Home"
                     android:textColor="@color/dark_grey"
+                    android:gravity="center"
                     app:layout_constraintTop_toBottomOf="@+id/ivHome"
                     app:layout_constraintStart_toStartOf="@+id/ivHome"
                     app:layout_constraintEnd_toEndOf="@+id/ivHome"
@@ -69,7 +69,7 @@
 
                 <ImageView
                     android:id="@+id/ivOffers"
-                    android:layout_width="28dp"
+                    android:layout_width="0dp"
                     android:layout_height="28dp"
                     app:srcCompat="@drawable/ic_search"
                     app:layout_constraintTop_toTopOf="parent"
@@ -79,10 +79,11 @@
 
                 <TextView
                     android:id="@+id/tvOffers"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="Offers"
                     android:textColor="@color/dark_grey"
+                    android:gravity="center"
                     app:layout_constraintTop_toBottomOf="@+id/ivOffers"
                     app:layout_constraintStart_toStartOf="@+id/ivOffers"
                     app:layout_constraintEnd_toEndOf="@+id/ivOffers"
@@ -90,7 +91,7 @@
 
                 <ImageView
                     android:id="@+id/ivSearch"
-                    android:layout_width="28dp"
+                    android:layout_width="0dp"
                     android:layout_height="28dp"
                     app:srcCompat="@drawable/ic_loupe"
                     app:layout_constraintTop_toTopOf="parent"
@@ -100,10 +101,11 @@
 
                 <TextView
                     android:id="@+id/tvSearch"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="Search"
                     android:textColor="@color/dark_grey"
+                    android:gravity="center"
                     app:layout_constraintTop_toBottomOf="@+id/ivSearch"
                     app:layout_constraintStart_toStartOf="@+id/ivSearch"
                     app:layout_constraintEnd_toEndOf="@+id/ivSearch"
@@ -111,7 +113,7 @@
 
                 <ImageView
                     android:id="@+id/ivCart"
-                    android:layout_width="28dp"
+                    android:layout_width="0dp"
                     android:layout_height="28dp"
                     app:srcCompat="@drawable/ic_shopping_cart"
                     app:layout_constraintTop_toTopOf="parent"
@@ -121,10 +123,11 @@
 
                 <TextView
                     android:id="@+id/tvCart"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="Cart"
                     android:textColor="@color/dark_grey"
+                    android:gravity="center"
                     app:layout_constraintTop_toBottomOf="@+id/ivCart"
                     app:layout_constraintStart_toStartOf="@+id/ivCart"
                     app:layout_constraintEnd_toEndOf="@+id/ivCart"
@@ -132,9 +135,8 @@
 
                 <ImageView
                     android:id="@+id/ivMore"
-                    android:layout_width="28dp"
+                    android:layout_width="0dp"
                     android:layout_height="28dp"
-                    android:layout_marginEnd="16dp"
                     app:srcCompat="@drawable/ic_more"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/ivCart"
@@ -143,10 +145,11 @@
 
                 <TextView
                     android:id="@+id/tvMore"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="More"
                     android:textColor="@color/dark_grey"
+                    android:gravity="center"
                     app:layout_constraintTop_toBottomOf="@+id/ivMore"
                     app:layout_constraintStart_toStartOf="@+id/ivMore"
                     app:layout_constraintEnd_toEndOf="@+id/ivMore"
