@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.06"
+            android:orientation="vertical"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.94"
+            android:orientation="vertical"/>
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            app:srcCompat="@drawable/ic_arrow_back_black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvSavedAddresses"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/payment_methods.title"
+            android:textStyle="bold"
+            android:textColor="@color/dark_grey"
+            android:textSize="22sp"
+            android:textAllCaps="true"
+            app:layout_constraintTop_toBottomOf="@+id/ivBack"
+            app:layout_constraintStart_toStartOf="@+id/ivBack"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvManageAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/payment_methods.subtitle"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvSavedAddresses"
+            app:layout_constraintStart_toStartOf="@+id/ivBack"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <View
+            android:id="@+id/vSeparator"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/grey"
+            app:layout_constraintTop_toBottomOf="@+id/tvManageAddress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvWallets"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="@string/payment_methods.wallets"
+            android:textAllCaps="true"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"
+            app:layout_constraintStart_toStartOf="@+id/glStart"
+            app:layout_constraintTop_toBottomOf="@+id/vSeparator" />
+
+        <ImageView
+            android:id="@+id/ivAmazonPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            app:srcCompat="@drawable/ic_amazon_pay_card_logo"
+            app:layout_constraintTop_toBottomOf="@+id/tvWallets"
+            app:layout_constraintStart_toStartOf="@id/glStart"/>
+
+        <TextView
+            android:id="@+id/tvAmazonPay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/payment_methods.amazon_pay"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="@+id/ivAmazonPay"
+            app:layout_constraintStart_toEndOf="@+id/ivAmazonPay"
+            app:layout_constraintEnd_toStartOf="@+id/tvLinkAmazonPay"
+            app:layout_constraintBottom_toBottomOf="@+id/ivAmazonPay"/>
+
+        <TextView
+            android:id="@+id/tvLinkAmazonPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/payment_methods.link_account"
+            android:textColor="@color/dark_blue"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            app:layout_constraintTop_toTopOf="@+id/ivAmazonPay"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"
+            app:layout_constraintBottom_toBottomOf="@+id/ivAmazonPay"/>
+
+        <View
+            android:id="@+id/vSeparatorAmazonPay"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="18dp"
+            android:background="@color/grey"
+            app:layout_constraintTop_toBottomOf="@+id/ivAmazonPay"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"/>
+
+        <ImageView
+            android:id="@+id/ivPaypal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            app:srcCompat="@drawable/ic_paypal"
+            app:layout_constraintTop_toBottomOf="@+id/vSeparatorAmazonPay"
+            app:layout_constraintStart_toStartOf="@id/glStart"/>
+
+        <TextView
+            android:id="@+id/tvPaypal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/payment_methods.paypal"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="@+id/ivPaypal"
+            app:layout_constraintStart_toEndOf="@+id/ivPaypal"
+            app:layout_constraintEnd_toStartOf="@+id/tvLinkPaypal"
+            app:layout_constraintBottom_toBottomOf="@+id/ivPaypal"/>
+
+        <TextView
+            android:id="@+id/tvLinkPaypal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/payment_methods.linked"
+            android:textColor="@color/light_green"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            app:layout_constraintTop_toTopOf="@+id/ivPaypal"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"
+            app:layout_constraintBottom_toBottomOf="@+id/ivPaypal"/>
+
+        <View
+            android:id="@+id/vSeparatorPaypal"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="18dp"
+            android:background="@color/grey"
+            app:layout_constraintTop_toBottomOf="@+id/ivPaypal"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"/>
+
+        <TextView
+            android:id="@+id/tvCards"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="@string/payment_methods.card"
+            android:textAllCaps="true"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"
+            app:layout_constraintStart_toStartOf="@+id/glStart"
+            app:layout_constraintTop_toBottomOf="@+id/vSeparatorPaypal" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSavedCards"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/tvCards"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"/>
+
+        <Button
+            android:id="@+id/btAddCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/splash_screen.bg"
+            android:text="@string/payment_methods.new_card"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:layout_constraintTop_toBottomOf="@+id/rvSavedCards"
+            app:layout_constraintStart_toStartOf="@+id/glStart"
+            app:layout_constraintEnd_toEndOf="@+id/glEnd"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -53,4 +53,17 @@
 
     <string name="address.formatted">%s %s, %s %s</string>
 
+    <string name="payment_methods.title">Payment methods</string>
+    <string name="payment_methods.subtitle">Tip: Use wallets to enjoy faster checkouts.</string>
+    <string name="payment_methods.wallets">Wallets</string>
+    <string name="payment_methods.amazon_pay">Amazon Pay</string>
+    <string name="payment_methods.paypal">Paypal</string>
+    <string name="payment_methods.paytm">PayTM</string>
+    <string name="payment_methods.linked">Linked</string>
+    <string name="payment_methods.link_account">Link account</string>
+    <string name="payment_methods.card">Credit/debit card</string>
+    <string name="payment_methods.new_card">Add new card</string>
+    <string name="payment_methods.cvv">cvv</string>
+    <string name="payment_methods.make_payment">Make payment</string>
+
 </resources>

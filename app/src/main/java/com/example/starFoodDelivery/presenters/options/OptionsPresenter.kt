@@ -2,6 +2,7 @@ package com.example.starFoodDelivery.presenters.options
 
 import android.content.Context
 import com.example.starFoodDelivery.contracts.options.OptionsContract
+import com.example.starFoodDelivery.ui.fragment.PaymentMethodsFragment
 import com.example.starFoodDelivery.ui.fragment.SavedAddressesFragment
 
 class OptionsPresenter: OptionsContract.Presenter {
@@ -20,7 +21,7 @@ class OptionsPresenter: OptionsContract.Presenter {
 
     override fun onManageAddressClick() = view.addContent(SavedAddressesFragment().newInstance(), SavedAddressesFragment.TAG)
 
-    override fun onPaymentClick() = view.showToast("onPaymentClick")
+    override fun onPaymentClick() = view.addContent(PaymentMethodsFragment().newInstance(), PaymentMethodsFragment.TAG)
 
     override fun onFavouritesClick() = view.showToast("onFavouritesClick")
 
