@@ -9,6 +9,7 @@ import com.example.starFoodDelivery.R
 import com.example.starFoodDelivery.contracts.options.OptionsContract
 import com.example.starFoodDelivery.presenters.options.OptionsPresenter
 import com.example.starFoodDelivery.util.TAG
+import com.example.starFoodDelivery.util.showELog
 import com.example.starFoodDelivery.util.visibility
 import kotlinx.android.synthetic.main.fragment_options.*
 
@@ -32,13 +33,14 @@ class OptionsFragment: BaseHomePageFragment(), OptionsContract.View, View.OnClic
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        isMyAccountSectionVisible = false
         presenter = OptionsPresenter()
         presenter.attachView(this, context!!)
     }
 
     override fun initView() {
         myAccountSectionViews = mutableListOf(vSeparatorAccount, tvManageAddress, ivManageAddress, tvPayment, ivPayment, tvFavourites, ivFavourites, tvRefferals, ivRefferals, tvOffers, ivOffers)
-        myAccountSectionViews.visibility(View.GONE)
+        setMyAccountSectionVisibility(isMyAccountSectionVisible)
         tvEdit?.setOnClickListener(this)
         tvMyAccount?.setOnClickListener(this)
         tvMyAccountDesc?.setOnClickListener(this)
@@ -64,11 +66,11 @@ class OptionsFragment: BaseHomePageFragment(), OptionsContract.View, View.OnClic
 
     override fun setMyAccountSectionVisibility(isVisible: Boolean) {
         if(isVisible){
-            myAccountSectionViews.visibility(View.GONE)
-            ivAccountList?.setImageDrawable(ContextCompat.getDrawable(context!!, R.drawable.ic_arrow_right))
-        }else{
             myAccountSectionViews.visibility(View.VISIBLE)
             ivAccountList?.setImageDrawable(ContextCompat.getDrawable(context!!, R.drawable.ic_arrow_down))
+        }else{
+            myAccountSectionViews.visibility(View.GONE)
+            ivAccountList?.setImageDrawable(ContextCompat.getDrawable(context!!, R.drawable.ic_arrow_right))
         }
     }
 
@@ -76,8 +78,8 @@ class OptionsFragment: BaseHomePageFragment(), OptionsContract.View, View.OnClic
         when(v?.id){
             tvEdit?.id -> presenter.onEditProfileClick()
             tvMyAccount?.id, tvMyAccountDesc?.id, ivAccountList?.id -> {
-                presenter.onMyAccountSectionClick(isMyAccountSectionVisible)
                 isMyAccountSectionVisible = !isMyAccountSectionVisible
+                presenter.onMyAccountSectionClick(isMyAccountSectionVisible)
             }
             tvManageAddress?.id, ivManageAddress?.id -> presenter.onManageAddressClick()
             tvPayment?.id, ivPayment?.id -> presenter.onPaymentClick()

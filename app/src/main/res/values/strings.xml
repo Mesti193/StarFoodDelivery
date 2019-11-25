@@ -28,5 +28,12 @@
     <string name="otp.otp_send_to">OTP send to:</string>
 
     <string name="options.edit">Edit</string>
+    
+    <string name="saved_addresses.title">Saved addresses</string>
+    <string name="saved_addresses.subtitle">Manage Address</string>
+    <string name="saved_addresses.new_address_button">Add New Address</string>
+
+    <string name="saved_addresses_item.edit">Edit</string>
+    <string name="saved_addresses_item.delete">Delete</string>
 
 </resources>
