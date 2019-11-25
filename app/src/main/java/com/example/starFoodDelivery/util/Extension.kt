@@ -13,6 +13,7 @@ import android.widget.Toast
 import androidx.annotation.ColorRes
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.example.starFoodDelivery.di.MainApplication
 import com.mukesh.OtpView
 import java.util.*
 
@@ -68,3 +69,5 @@ fun EditText.afterTextChanged(afterTextChanged: (String) -> Unit) {
 fun OtpView.getString(): String = this.text.toString()
 fun OtpView.getUpperString(): String = this.text.toString().toUpperCase(Locale.getDefault())
 fun OtpView.lineColor(@ColorRes id: Int) = this.setLineColor(ContextCompat.getColorStateList(context!!, id))
+
+fun Any.getDatabase() = MainApplication.db

@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.starFoodDelivery.R
 import com.example.starFoodDelivery.contracts.saved_addresses.SavedAddressesContract
+import com.example.starFoodDelivery.domain.entities.SavedAddresses
 import com.example.starFoodDelivery.presenters.saved_addresses.SavedAddressesPresenter
 import com.example.starFoodDelivery.ui.adapter.SavedAddressesAdapter
 import com.example.starFoodDelivery.util.TAG
-import com.example.starFoodDelivery.util.toast
 import kotlinx.android.synthetic.main.fragment_saved_addresses.*
 
 class SavedAddressesFragment: BaseHomePageFragment(), SavedAddressesContract.View, View.OnClickListener {
@@ -38,7 +38,10 @@ class SavedAddressesFragment: BaseHomePageFragment(), SavedAddressesContract.Vie
     override fun initView() {
         ivBack?.setOnClickListener(this)
         btAddAddress?.setOnClickListener(this)
-        savedAddressesAdapter = SavedAddressesAdapter(mutableListOf("test", "test2"), { presenter.onEditItemClick() }, { presenter.onDeleteItemClick() })
+    }
+
+    override fun displaySavedAddresses(savedAddresses: MutableList<SavedAddresses>) {
+        savedAddressesAdapter = SavedAddressesAdapter(savedAddresses, { presenter.onEditItemClick(it) }, { presenter.onDeleteItemClick(it) })
         rvSavedAddresses.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL ,false)
             adapter = savedAddressesAdapter

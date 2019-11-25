@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/ivAddressType"
-        android:layout_width="46dp"
-        android:layout_height="46dp"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
         app:srcCompat="@drawable/ic_hot_drink"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
@@ -18,7 +18,7 @@
         android:id="@+id/tvName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         tools:text="Work"
         android:textColor="@color/dark_grey"
         android:textStyle="bold"

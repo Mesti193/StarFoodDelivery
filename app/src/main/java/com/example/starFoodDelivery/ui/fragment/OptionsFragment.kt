@@ -9,7 +9,6 @@ import com.example.starFoodDelivery.R
 import com.example.starFoodDelivery.contracts.options.OptionsContract
 import com.example.starFoodDelivery.presenters.options.OptionsPresenter
 import com.example.starFoodDelivery.util.TAG
-import com.example.starFoodDelivery.util.showELog
 import com.example.starFoodDelivery.util.visibility
 import kotlinx.android.synthetic.main.fragment_options.*
 

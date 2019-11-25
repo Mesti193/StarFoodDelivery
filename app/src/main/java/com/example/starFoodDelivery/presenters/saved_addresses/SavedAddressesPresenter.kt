@@ -2,7 +2,13 @@ package com.example.starFoodDelivery.presenters.saved_addresses
 
 import android.content.Context
 import com.example.starFoodDelivery.contracts.saved_addresses.SavedAddressesContract
+import com.example.starFoodDelivery.domain.entities.SavedAddresses
 import com.example.starFoodDelivery.ui.fragment.SetDeliveryLocationFragment
+import com.example.starFoodDelivery.util.getDatabase
+import io.reactivex.Completable
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.schedulers.Schedulers
 
 class SavedAddressesPresenter: SavedAddressesContract.Presenter {
     private lateinit var view: SavedAddressesContract.View
@@ -12,11 +18,36 @@ class SavedAddressesPresenter: SavedAddressesContract.Presenter {
         view = baseView
         context = baseContext
         view.initView()
+        getSavedAddresses()
     }
 
-    override fun onEditItemClick() = view.addContent(SetDeliveryLocationFragment().newInstance(), SetDeliveryLocationFragment.TAG)
+    private fun getSavedAddresses() {
+        CompositeDisposable().add(
+            getDatabase().SavedAddressesDao().getAll()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({
+                    view.displaySavedAddresses(it)
+                }, {
 
-    override fun onDeleteItemClick() = view.showToast("onDeleteItemClick")
+                })
+        )
+    }
+
+    override fun onEditItemClick(savedAddresses: SavedAddresses) = view.addContent(SetDeliveryLocationFragment().newInstance(savedAddresses), SetDeliveryLocationFragment.TAG)
+
+    override fun onDeleteItemClick(savedAddresses: SavedAddresses) {
+        CompositeDisposable().add(
+            Completable.fromAction{ getDatabase().SavedAddressesDao().delete(savedAddresses) }
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({
+                    getSavedAddresses()
+                }, {
+
+                })
+        )
+    }
 
     override fun onAddNewAddressButtonClick() = view.addContent(SetDeliveryLocationFragment().newInstance(), SetDeliveryLocationFragment.TAG)
 }

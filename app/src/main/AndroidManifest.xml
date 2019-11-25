@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
         package="com.example.starFoodDelivery">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="com.example.towntour.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
             android:name="com.example.starFoodDelivery.di.MainApplication"
             android:allowBackup="true"
@@ -20,6 +26,11 @@
         </activity>
         <activity android:name="com.example.starFoodDelivery.ui.activity.MainActivity"/>
         <activity android:name="com.example.starFoodDelivery.ui.activity.HomePageActivity"/>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCqsbZO_j4_lnLH0_BxkQIWB2RZ--cTfhE"/>
+
     </application>
 
 </manifest>

@@ -5,6 +5,7 @@
     <color name="colorAccent">#f76c44</color>
 
     <color name="black_transparent_80">#CC000000</color>
+    <color name="black_transparent">#33000000</color>
 
     <color name="splash_screen.bg">#f76c44</color>
     <color name="white">#FFF</color>
@@ -12,6 +13,7 @@
     <color name="grey">#9499a2</color>
     <color name="light_grey">#bdc0c6</color>
     <color name="dark_grey">#1c1a2e</color>
+    <color name="dark_blue">#2546B0</color>
     <color name="facebook_button">#5671ea</color>
     <color name="google_button">#dc373b</color>
 
@@ -20,5 +22,6 @@
     <color name="otp_button">#63b04a</color>
 
     <color name="options.view_bg">#e4e5e8</color>
+
 
 </resources>

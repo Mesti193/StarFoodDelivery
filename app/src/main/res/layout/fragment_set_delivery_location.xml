@@ -26,12 +26,24 @@
             android:orientation="vertical"/>
 
         <ImageView
-            android:id="@+id/ivMap"
+            android:id="@+id/map"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="276dp"
+            android:background="@drawable/map"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
+
+<!--        <fragment-->
+<!--            android:id="@+id/map"-->
+<!--            xmlns:tools="http://schemas.android.com/tools"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="300dp"-->
+<!--            tools:context=".ui.activity.HomePageActivity"-->
+<!--            android:name="com.google.android.gms.maps.SupportMapFragment"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"/>-->
 
         <ImageView
             android:id="@+id/ivBack"
@@ -51,9 +63,9 @@
             android:text="@string/set_delivery_location.title"
             android:textStyle="bold"
             android:textColor="@color/dark_grey"
-            android:textSize="18sp"
+            android:textSize="22sp"
             android:textAllCaps="true"
-            app:layout_constraintTop_toBottomOf="@+id/ivMap"
+            app:layout_constraintTop_toBottomOf="@+id/map"
             app:layout_constraintStart_toStartOf="@id/glStart"
             app:layout_constraintEnd_toEndOf="@id/glEnd"/>
 
@@ -77,9 +89,158 @@
             android:layout_height="wrap_content"
             android:hint="@string/set_delivery_location.location_hint"
             android:textColor="@color/grey"
+            android:textSize="16sp"
+            android:drawableEnd="@drawable/ic_location"
             app:layout_constraintTop_toBottomOf="@+id/tvLocation"
             app:layout_constraintStart_toStartOf="@id/glStart"
             app:layout_constraintEnd_toEndOf="@id/glEnd"/>
+
+        <TextView
+            android:id="@+id/tvHouse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/set_delivery_location.house"
+            android:textStyle="bold"
+            android:textColor="@color/dark_grey"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            app:layout_constraintTop_toBottomOf="@+id/etLocation"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"/>
+
+        <EditText
+            android:id="@+id/etHouse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/set_delivery_location.house_hint"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvHouse"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"/>
+
+        <TextView
+            android:id="@+id/tvCity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/set_delivery_location.city"
+            android:textStyle="bold"
+            android:textColor="@color/dark_grey"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            app:layout_constraintTop_toBottomOf="@+id/etHouse"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"/>
+
+        <EditText
+            android:id="@+id/etCity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/set_delivery_location.city_hint"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvCity"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"/>
+
+        <TextView
+            android:id="@+id/tvCountry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/set_delivery_location.country"
+            android:textStyle="bold"
+            android:textColor="@color/dark_grey"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            app:layout_constraintTop_toBottomOf="@+id/etCity"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"/>
+
+        <EditText
+            android:id="@+id/etCountry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/set_delivery_location.country_hint"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvCountry"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"/>
+
+        <TextView
+            android:id="@+id/tvSaveAs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/set_delivery_location.save_as"
+            android:textStyle="bold"
+            android:textColor="@color/dark_grey"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            app:layout_constraintTop_toBottomOf="@+id/etCountry"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"/>
+
+        <TextView
+            android:id="@+id/tvSaveAsHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="@string/set_delivery_location.save_as_home"
+            android:textStyle="bold"
+            android:textColor="@color/dark_grey"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            android:gravity="center"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintTop_toBottomOf="@+id/tvSaveAs"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintEnd_toStartOf="@id/tvSaveAsOffice"/>
+
+        <TextView
+            android:id="@+id/tvSaveAsOffice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/set_delivery_location.save_as_office"
+            android:textStyle="bold"
+            android:textColor="@color/dark_grey"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@+id/tvSaveAsHome"
+            app:layout_constraintStart_toEndOf="@+id/tvSaveAsHome"
+            app:layout_constraintEnd_toStartOf="@+id/tvSaveAsOther"/>
+
+        <TextView
+            android:id="@+id/tvSaveAsOther"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/set_delivery_location.save_as_other"
+            android:textStyle="bold"
+            android:textColor="@color/dark_grey"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@+id/tvSaveAsHome"
+            app:layout_constraintStart_toEndOf="@+id/tvSaveAsOffice"
+            app:layout_constraintEnd_toStartOf="@+id/glEnd"/>
+
+        <Button
+            android:id="@+id/btSaveLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@color/splash_screen.bg"
+            android:text="@string/set_delivery_location.save_location"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvSaveAsOther"
+            app:layout_constraintStart_toStartOf="@+id/glStart"
+            app:layout_constraintEnd_toEndOf="@+id/glEnd"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
