@@ -28,7 +28,7 @@
     <string name="otp.otp_send_to">OTP send to:</string>
 
     <string name="options.edit">Edit</string>
-    
+
     <string name="saved_addresses.title">Saved addresses</string>
     <string name="saved_addresses.subtitle">Manage Address</string>
     <string name="saved_addresses.new_address_button">Add New Address</string>
@@ -52,5 +52,7 @@
     <string name="set_delivery_location.save_location">Save location</string>
 
     <string name="address.formatted">%s %s, %s %s</string>
+
+    <string name="home.filter">Filter</string>
 
 </resources>

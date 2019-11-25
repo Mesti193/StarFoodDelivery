@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="24dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/ivRestaurant"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:background="@color/home.restaurant_placeholder"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvRestaurantName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        tools:text="Santushti Smoothies and Shakes"
+        android:textStyle="bold"
+        android:textColor="@color/home.restaurant_name"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivRestaurant"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvRestaurantType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="North Indian"
+        android:textColor="@color/home.restaurant_type"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/tvRestaurantName"
+        app:layout_constraintStart_toStartOf="@+id/tvRestaurantName"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvRestaurantArea"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Fatehgunj"
+        android:textColor="@color/home.restaurant_other"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/tvRestaurantType"
+        app:layout_constraintStart_toStartOf="@+id/tvRestaurantName"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:id="@+id/vSeparator"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/home.restaurant_other"
+        app:layout_constraintTop_toBottomOf="@+id/tvRestaurantArea"
+        app:layout_constraintStart_toStartOf="@+id/tvRestaurantName"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivStars"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="8dp"
+        app:srcCompat="@drawable/ic_star"
+        app:layout_constraintTop_toBottomOf="@+id/vSeparator"
+        app:layout_constraintStart_toStartOf="@+id/tvRestaurantName"/>
+
+    <TextView
+        android:id="@+id/tvStars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        tools:text="4.6"
+        android:textColor="@color/home.restaurant_type"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@+id/ivStars"
+        app:layout_constraintStart_toEndOf="@+id/ivStars"
+        app:layout_constraintBottom_toBottomOf="@+id/ivStars"/>
+
+    <TextView
+        android:id="@+id/tvDeliverIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Deliver in 20 min."
+        android:textColor="@color/home.restaurant_type"
+        android:textSize="16sp"
+        android:gravity="end"
+        app:layout_constraintTop_toTopOf="@+id/ivStars"
+        app:layout_constraintStart_toEndOf="@+id/tvStars"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/ivStars"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,7 @@ package com.example.starFoodDelivery.presenters.options
 import android.content.Context
 import com.example.starFoodDelivery.contracts.options.OptionsContract
 import com.example.starFoodDelivery.ui.fragment.SavedAddressesFragment
+import com.example.starFoodDelivery.ui.activity.MainActivity
 
 class OptionsPresenter: OptionsContract.Presenter {
     private lateinit var view: OptionsContract.View
@@ -32,7 +33,7 @@ class OptionsPresenter: OptionsContract.Presenter {
 
     override fun onRecentOrdersSectionClick() = view.showToast("onRecentOrdersSectionClick")
 
-    override fun onLogoutClick() = view.showToast("onLogoutClick")
+    override fun onLogoutClick() = view.startActivity(MainActivity())
 
 
 }

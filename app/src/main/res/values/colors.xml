@@ -23,5 +23,9 @@
 
     <color name="options.view_bg">#e4e5e8</color>
 
+    <color name="home.restaurant_placeholder">#E9FFE0</color>
+    <color name="home.restaurant_name">#1C1A2F</color>
+    <color name="home.restaurant_type">#777779</color>
+    <color name="home.restaurant_other">#90959F</color>
 
 </resources>

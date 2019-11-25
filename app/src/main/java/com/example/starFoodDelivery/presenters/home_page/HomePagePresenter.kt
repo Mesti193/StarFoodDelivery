@@ -3,6 +3,7 @@ package com.example.starFoodDelivery.presenters.home_page
 import android.content.Context
 import com.example.starFoodDelivery.contracts.home_page.HomePageContract
 import com.example.starFoodDelivery.ui.activity.HomePageActivity
+import com.example.starFoodDelivery.ui.fragment.HomeFragment
 import com.example.starFoodDelivery.ui.fragment.OptionsFragment
 
 class HomePagePresenter: HomePageContract.Presenter {
@@ -17,7 +18,7 @@ class HomePagePresenter: HomePageContract.Presenter {
 
     override fun onHomeButtonClick() {
         view.changeBottomBarButtons(HomePageActivity.HOME_BUTTON)
-        view.showToast("onHomeButtonClick")
+        view.switchContent(HomeFragment().newInstance(), HomeFragment.TAG)
     }
 
     override fun onOffersButtonClick() {

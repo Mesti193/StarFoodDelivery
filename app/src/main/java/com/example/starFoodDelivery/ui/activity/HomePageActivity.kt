@@ -42,6 +42,7 @@ class HomePageActivity: AppCompatActivity(), HomePageContract.View, View.OnClick
         tvCart?.setOnClickListener(this)
         ivMore?.setOnClickListener(this)
         tvMore?.setOnClickListener(this)
+        presenter.onMoreButtonClick()
     }
 
     override fun changeBottomBarButtons(id: Int) {

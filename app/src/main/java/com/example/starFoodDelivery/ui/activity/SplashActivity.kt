@@ -4,9 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
-import androidx.room.Room
 import com.example.starFoodDelivery.R
-import com.example.starFoodDelivery.repositories.database.AppDatabase
 
 class SplashActivity : AppCompatActivity() {
     companion object{
@@ -17,7 +15,7 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         Handler().postDelayed({
-                        startActivity(Intent(this, HomePageActivity::class.java))
+            startActivity(Intent(this, HomePageActivity::class.java))
 //            startActivity(Intent(this, MainActivity::class.java))
             finish()
         }, SPLASH_TIME_OUT)
