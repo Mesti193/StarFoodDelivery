@@ -34,7 +34,7 @@ class SavedAddressesFragment: BaseHomePageFragment(), SavedAddressesContract.Vie
         presenter = SavedAddressesPresenter()
         presenter.attachView(this, context!!)
     }
-//
+
     override fun initView() {
         ivBack?.setOnClickListener(this)
         btAddAddress?.setOnClickListener(this)

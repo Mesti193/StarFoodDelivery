@@ -36,4 +36,17 @@
     <string name="saved_addresses_item.edit">Edit</string>
     <string name="saved_addresses_item.delete">Delete</string>
 
+    <string name="set_delivery_location.title">Set Delivery Location</string>
+    <string name="set_delivery_location.location">Location</string>
+    <string name="set_delivery_location.location_hint">Bay terrace, cross island prey</string>
+    <string name="set_delivery_location.house">HOUSE/FLAT NO.</string>
+    <string name="set_delivery_location.house_hint">Enter house/flat number</string>
+    <string name="set_delivery_location.landmark">LANDMARK</string>
+    <string name="set_delivery_location.landmark_hint">Enter Landmark</string>
+    <string name="set_delivery_location.save_as">Save as</string>
+    <string name="set_delivery_location.save_as_home">Home</string>
+    <string name="set_delivery_location.save_as_office">Office</string>
+    <string name="set_delivery_location.save_as_other">Other</string>
+    <string name="set_delivery_location.save_location">Save location</string>
+
 </resources>
