@@ -28,17 +28,40 @@
         app:layout_constraintStart_toEndOf="@+id/ivCardType"
         app:layout_constraintTop_toTopOf="@+id/ivCardType" />
 
+    <EditText
+        android:id="@+id/etCvv"
+        android:layout_width="96dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:lines="1"
+        android:maxLength="3"
+        android:hint="@string/payment_methods.cvv"
+        android:textAllCaps="true"
+        android:inputType="number"
+        android:gravity="center"
+        android:background="@drawable/edit_text_border_green"
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
+        app:layout_constraintStart_toStartOf="@+id/tvName"
+        app:layout_constraintEnd_toStartOf="@+id/btMakePayment"/>
+
     <Button
         android:id="@+id/btMakePayment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
         android:paddingStart="32dp"
         android:paddingEnd="32dp"
         android:text="@string/payment_methods.make_payment"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/tvName"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:background="@color/light_grey"
+        android:clickable="false"
+        android:enabled="false"
+        app:layout_constraintTop_toTopOf="@+id/etCvv"
+        app:layout_constraintStart_toEndOf="@+id/etCvv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/etCvv"/>
 
     <View
         android:id="@+id/vSeparator"

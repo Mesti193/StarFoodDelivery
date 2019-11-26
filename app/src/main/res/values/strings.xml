@@ -65,5 +65,13 @@
     <string name="payment_methods.new_card">Add new card</string>
     <string name="payment_methods.cvv">cvv</string>
     <string name="payment_methods.make_payment">Make payment</string>
+    
+    <string name="add_new_card.title">Add new card</string>
+    <string name="add_new_card.card_number">Card number</string>
+    <string name="add_new_card.valid_thru">Valid thru ( MM / YYYY )</string>
+    <string name="add_new_card.cvv">Cvv</string>
+    <string name="add_new_card.name_on_card">Name on card</string>
+    <string name="add_new_card.check_box">Securely save card details</string>
+    <string name="add_new_card.apply">Apply</string>
 
 </resources>

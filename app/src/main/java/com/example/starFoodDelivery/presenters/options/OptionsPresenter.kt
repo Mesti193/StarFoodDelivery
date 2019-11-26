@@ -21,7 +21,7 @@ class OptionsPresenter: OptionsContract.Presenter {
 
     override fun onManageAddressClick() = view.addContent(SavedAddressesFragment().newInstance(), SavedAddressesFragment.TAG)
 
-    override fun onPaymentClick() = view.addContent(PaymentMethodsFragment().newInstance(), PaymentMethodsFragment.TAG)
+    override fun onPaymentClick() = view.addContent(PaymentMethodsFragment().newInstance(true), PaymentMethodsFragment.TAG)
 
     override fun onFavouritesClick() = view.showToast("onFavouritesClick")
 

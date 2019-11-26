@@ -16,11 +16,14 @@ class PaymentMethodsFragment: BaseHomePageFragment(), View.OnClickListener {
         val TAG: String = PaymentMethodsFragment.TAG()
     }
 
-    fun newInstance(): PaymentMethodsFragment {
-        return PaymentMethodsFragment()
+    fun newInstance(isEditPaymentMethodsSection: Boolean? = false): PaymentMethodsFragment {
+        val paymentMethodsFragment = PaymentMethodsFragment()
+        paymentMethodsFragment.isEditPaymentMethodsSection = isEditPaymentMethodsSection
+        return paymentMethodsFragment
     }
 
     private lateinit var savedCardsAdapter: SavedCardsAdapter
+    private var isEditPaymentMethodsSection: Boolean? = false
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = inflater.inflate(
         R.layout.fragment_payment_methods, container, false)
@@ -28,7 +31,7 @@ class PaymentMethodsFragment: BaseHomePageFragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        savedCardsAdapter = SavedCardsAdapter(mutableListOf("test"), {  }, { })
+        savedCardsAdapter = SavedCardsAdapter(isEditPaymentMethodsSection, mutableListOf("test"), {  }, { })
         rvSavedCards.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL ,false)
             adapter = savedCardsAdapter

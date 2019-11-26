@@ -36,7 +36,7 @@
             app:layout_constraintStart_toStartOf="parent"/>
 
         <TextView
-            android:id="@+id/tvSavedAddresses"
+            android:id="@+id/tvPaymentMethods"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
@@ -50,13 +50,13 @@
             app:layout_constraintEnd_toEndOf="parent"/>
 
         <TextView
-            android:id="@+id/tvManageAddress"
+            android:id="@+id/tvFasterCheckouts"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/payment_methods.subtitle"
             android:textColor="@color/grey"
             android:textSize="16sp"
-            app:layout_constraintTop_toBottomOf="@+id/tvSavedAddresses"
+            app:layout_constraintTop_toBottomOf="@+id/tvPaymentMethods"
             app:layout_constraintStart_toStartOf="@+id/ivBack"
             app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -66,7 +66,7 @@
             android:layout_height="1dp"
             android:layout_marginTop="24dp"
             android:background="@color/grey"
-            app:layout_constraintTop_toBottomOf="@+id/tvManageAddress"
+            app:layout_constraintTop_toBottomOf="@+id/tvFasterCheckouts"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 

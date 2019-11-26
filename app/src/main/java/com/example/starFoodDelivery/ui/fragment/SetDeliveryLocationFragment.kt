@@ -13,11 +13,9 @@ import com.example.starFoodDelivery.domain.entities.SavedAddresses
 import com.example.starFoodDelivery.presenters.delivery_location.SetDeliveryLocationPresenter
 import com.example.starFoodDelivery.util.TAG
 import com.example.starFoodDelivery.util.text
-import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.OnMapReadyCallback
 import kotlinx.android.synthetic.main.fragment_set_delivery_location.*
 
-class SetDeliveryLocationFragment: BaseHomePageFragment(), SetDeliveryLocationContract.View, View.OnClickListener, OnMapReadyCallback {
+class SetDeliveryLocationFragment: BaseHomePageFragment(), SetDeliveryLocationContract.View, View.OnClickListener {
     companion object {
         val TAG: String = SetDeliveryLocationFragment.TAG()
         const val HOME = 1
@@ -107,9 +105,5 @@ class SetDeliveryLocationFragment: BaseHomePageFragment(), SetDeliveryLocationCo
     }
 
     override fun backToPreviousScreen() = mainActivity.onBackPressed()
-
-    override fun onMapReady(p0: GoogleMap?) {
-//        mMap = p0!!
-    }
 
 }
