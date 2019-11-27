@@ -5,14 +5,18 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.starFoodDelivery.domain.entities.SavedAddresses
+import com.example.starFoodDelivery.domain.entities.SavedCards
 import com.example.starFoodDelivery.repositories.daos.SavedAddressesDao
+import com.example.starFoodDelivery.repositories.daos.SavedCardsDao
 
 @Database(
-    entities = [SavedAddresses::class],
+    entities = [SavedAddresses::class,
+    SavedCards::class],
     version = 1
 )
 abstract class AppDatabase : RoomDatabase(){
     abstract fun SavedAddressesDao(): SavedAddressesDao
+    abstract fun SavedCardsDao(): SavedCardsDao
 
     companion object {
         @Volatile private var instance: AppDatabase? = null

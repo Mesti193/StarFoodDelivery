@@ -61,64 +61,137 @@
             app:layout_constraintStart_toStartOf="@+id/ivBack"
             app:layout_constraintEnd_toEndOf="parent"/>
 
-        <Button
-            android:id="@+id/btAddCard"
+        <EditText
+            android:id="@+id/etCardNumber"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:hint="@string/add_new_card.card_number"
+            android:textColor="@color/grey"
+            android:textSize="20sp"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@+id/tvManageAddress"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"/>
+
+        <EditText
+            android:id="@+id/etValidThru"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/add_new_card.valid_thru"
+            android:textColor="@color/grey"
+            android:textSize="20sp"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@+id/etCardNumber"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintEnd_toStartOf="@id/etCvv"/>
+
+        <EditText
+            android:id="@+id/etCvv"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_new_card.cvv"
+            android:textColor="@color/grey"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="@+id/etValidThru"
+            android:inputType="numberPassword"
+            app:layout_constraintStart_toEndOf="@id/etValidThru"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"/>
+
+        <EditText
+            android:id="@+id/etNameOnCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/add_new_card.name_on_card"
+            android:textColor="@color/grey"
+            android:textSize="20sp"
+            android:inputType="textPersonName"
+            app:layout_constraintTop_toBottomOf="@+id/etCvv"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"/>
+
+        <ImageView
+            android:id="@+id/ivVerifies"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="24dp"
+            app:srcCompat="@drawable/ic_verified"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintTop_toBottomOf="@id/etNameOnCard"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintEnd_toStartOf="@+id/tvSecurelySave"/>
+
+        <TextView
+            android:id="@+id/tvSecurelySave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/add_new_card.check_box"
+            app:layout_constraintTop_toTopOf="@id/ivVerifies"
+            app:layout_constraintStart_toEndOf="@+id/ivVerifies"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"
+            app:layout_constraintBottom_toBottomOf="@+id/ivVerifies"/>
+
+        <Button
+            android:id="@+id/btApply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
             android:background="@color/splash_screen.bg"
             android:text="@string/add_new_card.apply"
             android:textColor="@color/white"
             android:textSize="22sp"
-            app:layout_constraintTop_toBottomOf="@+id/tvManageAddress"
+            app:layout_constraintTop_toBottomOf="@+id/tvSecurelySave"
             app:layout_constraintStart_toStartOf="@+id/glStart"
             app:layout_constraintEnd_toEndOf="@+id/glEnd"/>
 
         <ImageView
-            android:id="@+id/iv1"
+            android:id="@+id/ivVisa"
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_marginTop="32dp"
             app:srcCompat="@drawable/ic_visa"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
-            app:layout_constraintTop_toBottomOf="@id/btAddCard"
+            app:layout_constraintTop_toBottomOf="@id/btApply"
             app:layout_constraintStart_toStartOf="@id/glStart"
-            app:layout_constraintEnd_toStartOf="@+id/iv2"/>
+            app:layout_constraintEnd_toStartOf="@+id/ivMastercard"/>
 
         <ImageView
-            android:id="@+id/iv2"
+            android:id="@+id/ivMastercard"
             android:layout_width="36dp"
             android:layout_height="36dp"
             app:srcCompat="@drawable/ic_mastercard"
-            app:layout_constraintTop_toTopOf="@+id/iv1"
-            app:layout_constraintStart_toEndOf="@+id/iv1"
-            app:layout_constraintEnd_toStartOf="@+id/iv3"/>
+            app:layout_constraintTop_toTopOf="@+id/ivVisa"
+            app:layout_constraintStart_toEndOf="@+id/ivVisa"
+            app:layout_constraintEnd_toStartOf="@+id/ivDiscover"/>
 
         <ImageView
-            android:id="@+id/iv3"
+            android:id="@+id/ivDiscover"
             android:layout_width="36dp"
             android:layout_height="36dp"
             app:srcCompat="@drawable/ic_discover"
-            app:layout_constraintTop_toTopOf="@+id/iv1"
-            app:layout_constraintStart_toEndOf="@+id/iv2"
-            app:layout_constraintEnd_toStartOf="@+id/iv4"/>
+            app:layout_constraintTop_toTopOf="@+id/ivVisa"
+            app:layout_constraintStart_toEndOf="@+id/ivMastercard"
+            app:layout_constraintEnd_toStartOf="@+id/ivPaypal"/>
 
         <ImageView
-            android:id="@+id/iv4"
+            android:id="@+id/ivPaypal"
             android:layout_width="36dp"
             android:layout_height="36dp"
             app:srcCompat="@drawable/ic_paypal"
-            app:layout_constraintTop_toTopOf="@+id/iv1"
-            app:layout_constraintStart_toEndOf="@+id/iv3"
-            app:layout_constraintEnd_toStartOf="@+id/iv5"/>
+            app:layout_constraintTop_toTopOf="@+id/ivVisa"
+            app:layout_constraintStart_toEndOf="@+id/ivDiscover"
+            app:layout_constraintEnd_toStartOf="@+id/ivCiti"/>
 
         <ImageView
-            android:id="@+id/iv5"
+            android:id="@+id/ivCiti"
             android:layout_width="36dp"
             android:layout_height="36dp"
             app:srcCompat="@drawable/ic_citi"
-            app:layout_constraintTop_toTopOf="@+id/iv1"
-            app:layout_constraintStart_toEndOf="@+id/iv4"
+            app:layout_constraintTop_toTopOf="@+id/ivVisa"
+            app:layout_constraintStart_toEndOf="@+id/ivPaypal"
             app:layout_constraintEnd_toEndOf="@id/glEnd"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
